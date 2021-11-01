@@ -17,11 +17,11 @@
                 <div class="col">
                     <!-- sezionde img grandi  -->
                     <div class="left_side_container">
-                        <div class="single_image">
-                            <img src="img/01.jpg" alt="">
+                        <div class="single_image" v-for="image in imagesList">
+                            <img v-bind:src="image.url" alt="">
                             <div class="text">
-                                <h3>zz</h3>
-                                <p>zzz</p>
+                                <h3>{{image.titolo}}</h3>
+                                <p>{{image.descrizione}}</p>
                             </div>
                         </div>
                     </div>

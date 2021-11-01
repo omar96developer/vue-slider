@@ -13,7 +13,7 @@ var app = new Vue(
                 {
                     url: 'img/02.jpg',
                     titolo: 'Svizzera',
-                    descrizione: 'Lorem ipsum',
+                    descrizione: 'Lorem ipsum,lorem ipsum',
                 },
                 {
                     url: 'img/03.jpg',
@@ -23,7 +23,7 @@ var app = new Vue(
                 {
                     url: 'img/04.jpg',
                     titolo: 'Germania',
-                    descrizione: 'Lorem ipsum',
+                    descrizione: 'Lorem ipsum,lorem ipsum',
                 },
                 {
                     url: 'img/05.jpg',
