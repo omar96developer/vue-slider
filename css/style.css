@@ -1,0 +1,19 @@
+
+.single_image {
+    position: relative;
+}
+.single_image img{
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+   
+    
+}
+.single_image .text {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    text-align: right;
+    color: white;
+
+}
