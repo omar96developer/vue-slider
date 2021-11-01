@@ -1,13 +1,30 @@
+.slider_container{
+    display: flex;
+}
+.left_side_container {
+    position: relative;
+    width: 80%;
+}
+.right_side_container {
+    width: 20%;
+}
+
 
 .single_image {
-    position: relative;
+    position: absolute;
+    width: 100%;
+    max-height: 500px;
+    top: 0;
+    right: 0;
+    opacity: 0;
+}
+.single_image.active {
+    opacity: 1;
 }
 .single_image img{
     width: 100%;
-    max-height: 300px;
+    max-height: 500px;
     object-fit: cover;
-   
-    
 }
 .single_image .text {
     position: absolute;
@@ -15,5 +32,4 @@
     bottom: 20px;
     text-align: right;
     color: white;
-
 }

@@ -30,10 +30,28 @@ var app = new Vue(
                     titolo: 'Paradise',
                     descrizione: 'Lorem ipsum',
                 }
-            ]
+            ],
+            currentActiveImage: 0,
         },
         methods: {
+            onPrevClick() {
+                let newIndex = this.currentActiveImage - 1;
 
+                if(newIndex < 0) {
+                    newIndex = this.imagesList.length -1;
+                }
+
+                this.currentActiveImage = newIndex
+            },
+            onNextClick() {
+                let newIndex = this.currentActiveImage + 1;
+
+                if(newIndex > this.imagesList.length -1) {
+                    newIndex = 0;
+                }
+
+                this.currentActiveImage = newIndex
+            }
         }
     }
 );

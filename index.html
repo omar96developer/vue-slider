@@ -7,24 +7,32 @@
     <title>Slider VueJs</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-\   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 <body>
     <main id="root">
         <div class="container">
             <div class="row">
-                <div class="col">
+                <div class="col slider_container">
                     <!-- sezionde img grandi  -->
                     <div class="left_side_container">
-                        <div class="single_image" v-for="image in imagesList">
-                            <img v-bind:src="image.url" alt="">
+                        <div class="single_image" :class="i === currentActiveImage ? 'active' : '' " v-for="image, i in imagesList">
+                            <img v-bind:src="image.url" :alt="'Immagine' + (i + 1)">
                             <div class="text">
                                 <h3>{{image.titolo}}</h3>
                                 <p>{{image.descrizione}}</p>
                             </div>
                         </div>
                     </div>
+                    <div class="right_side_container">
+                        <div class="freccie">
+                            <button class="" @click="onPrevClick">su</button>
+                            <button class="" @click="onNextClick">giu</button>
+                            
+                        </div>
+                    </div>
+                  
                 </div>
             </div>
         </div>
