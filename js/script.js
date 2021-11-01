@@ -52,6 +52,11 @@ var app = new Vue(
 
                 this.currentActiveImage = newIndex
             }
+        },
+        mounted() {
+            setInterval(() => {
+                this.onNextClick()
+            }, 3000);
         }
     }
 );
