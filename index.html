@@ -26,11 +26,13 @@
                         </div>
                     </div>
                     <div class="right_side_container">
-                        <div class="freccie">
-                            <button class="" @click="onPrevClick">su</button>
-                            <button class="" @click="onNextClick">giu</button>
-                            
+                        <div class="image_small" :class="k === currentActiveImage ? 'active' : '' " v-for="images, k in imagesList">
+                            <img v-bind:src="images.url" :alt="'Immagine' + (k + 1)">
                         </div>
+                        
+                        <button class="freccia_su" @click="onPrevClick"><i class="fas fa-caret-up"></i></button>
+                        <button class="freccia_giu" @click="onNextClick"><i class="fas fa-caret-down"></i></button>
+                       
                     </div>
                   
                 </div>
