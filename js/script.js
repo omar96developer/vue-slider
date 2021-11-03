@@ -54,9 +54,9 @@ var app = new Vue(
             }
         },
         mounted() {
-            /* setInterval(() => {
+            setInterval(() => {
                 this.onNextClick()
-            }, 3000); */
+            }, 3000);
         }
     }
 );
